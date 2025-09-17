@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfólio - João Pedro Rabelo</title>
+  <link rel="stylesheet" href="rabelo.css" />
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <img src="joao-perfil.jpg" alt="Foto de João Pedro" class="foto-perfil" />
+      <div class="header-info">
+        <h1>João Pedro Rabelo Oliveira</h1>
+        <p>Entusiasta Júnior em Cibersegurança e Tecnologia</p>
+        <p class="contatos">
+          <a href="mailto:jprabelo41@gmail.com" target="_blank" rel="noopener noreferrer">jprabelo41@gmail.com</a> | 
+          <a href="https://wa.me/5511951611145" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+        </p>
+        <div class="social-buttons">
+          <a href="https://github.com/rabelo6969" target="_blank" class="btn github">GitHub</a>
+          <a href="https://www.linkedin.com/in/jo%C3%A3o-pedro-rabelo-oliveira-a30b56257/" target="_blank" class="btn linkedin">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="sobre">
+      <h2>Sobre Mim</h2>
+      <p>
+        Me chamo <strong>João Pedro Rabelo Oliveira</strong>, tenho 18 anos e moro na Zona Sul de São Paulo. Atualmente estou cursando o 
+        <strong>primeiro ano de Cybersecurity na FIAP</strong> (2025–2026; curso de 2 anos). Estudo no período da manhã.
+      </p>
+      <p>
+        Sou um entusiasta júnior em cibersegurança, autodidata em várias áreas: aprendi <strong>baixo, violão e guitarra</strong> por conta própria, além de HTML e CSS. 
+        Também venho me aperfeiçoando em <strong>Python</strong> com os estudos da faculdade e por fora.
+      </p>
+      <p>
+        Fiz o Ensino Fundamental no <strong>Colégio Albert Einstein</strong> (do 1º ao 9º ano) e o Ensino Médio no <strong>Curso Técnico do SENAC</strong>, 
+        onde conquistei certificados em <strong>Help Desk</strong>, <strong>Redes</strong> e <strong>Introdução ao JavaScript</strong>.
+      </p>
+      <h3>Pontos Positivos</h3>
+      <ul>
+        <li><strong>Sociável:</strong> Tenho facilidade em me comunicar e criar relacionamentos saudáveis.</li>
+        <li><strong>Aprendizado rápido:</strong> Consigo aprender novos conceitos e tecnologias com facilidade e rapidez.</li>
+        <li><strong>Entusiasta:</strong> Tenho um grande interesse em cibersegurança e estou sempre buscando mais conhecimento na área.</li>
+      </ul>
+    </section>
+
+    <section id="experiencias">
+      <h2>Experiências</h2>
+     
+      ...
+    </section>
+
+    <section id="certificados">
+      <h2>Meus Certificados</h2>
+      <div class="carrossel">
+        <div class="slides">
+          <div class="slide">
+            <div class="capa">
+              <h3>FIAP Nano Course</h3>
+              <p>Fundamentos de Cibersegurança</p>
+            </div>
+            <img src="1.jpg" alt="Certificado FIAP Nano Course" />
+          </div>
+          <div class="slide">
+            <div class="capa">
+              <h3>Cisco Academy</h3>
+              <p>Redes e Segurança</p>
+            </div>
+            <img src="2.jpg" alt="Certificado Cisco Academy" />
+          </div>
+          <div class="slide">
+            <div class="capa">
+              <h3>Red Hat</h3>
+              <p>Introdução ao Linux e Administração</p>
+            </div>
+            <img src="3.jpg" alt="Certificado Red Hat" />
+          </div>
+          <div class="slide">
+            <div class="capa">
+              <h3>Conquer School</h3>
+              <p>Soft Skills e Liderança</p>
+            </div>
+            <img src="4.jpg" alt="Certificado Conquer School" />
+          </div>
+          
+          <div class="slide">
+            <div class="capa">
+              <h3>Cloud Fundamentals</h3>
+              <p>Fundamentos de Computação em Nuvem</p>
+            </div>
+            <img src="image.png" alt="Certificado Cloud Fundamentals" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="botao-expectativas" style="margin: 40px 0;">
+      <a href="expectativas.html" class="btn github">→Minhas Expectativas</a>
+    </section>
+
+    <a href="sobremim.html" class="btn-voltar">→ Primeiro Contato com Tecnologia</a>
+  </main>
+
+  <script>
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+
+    function showSlide(index) {
+      if (index >= slides.length) slideIndex = 0;
+      if (index < 0) slideIndex = slides.length - 1;
+
+      slides.forEach((slide) => {
+        slide.style.transform = `translateX(-${slideIndex * 100}%)`;
+      });
+    }
+
+    function autoSlide() {
+      slideIndex++;
+      showSlide(slideIndex);
+    }
+
+    showSlide(slideIndex);
+    setInterval(autoSlide, 3000);
+  </script>
+</body>
+</html>
